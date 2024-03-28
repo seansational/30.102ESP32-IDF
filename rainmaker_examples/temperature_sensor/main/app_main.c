@@ -25,6 +25,7 @@
 static const char *TAG = "app_main";
 
 esp_rmaker_device_t *temp_sensor_device;
+esp_rmaker_device_t *humidity_sensor_device;
 
 void app_main()
 {
@@ -51,7 +52,14 @@ void app_main()
     esp_rmaker_config_t rainmaker_cfg = {
         .enable_time_sync = false,
     };
-    esp_rmaker_node_t *node = esp_rmaker_node_init(&rainmaker_cfg, "ESP RainMaker Device", "Temperature Sensor");
+    // esp_rmaker_node_t *node = esp_rmaker_node_init(&rainmaker_cfg, "ESP RainMaker Device", "Temperature Sensor");
+    // if (!node) {
+    //     ESP_LOGE(TAG, "Could not initialise node. Aborting!!!");
+    //     vTaskDelay(5000/portTICK_PERIOD_MS);
+    //     abort();
+    // }
+
+    esp_rmaker_node_t *node = esp_rmaker_node_init(&rainmaker_cfg, "ESP RainMaker Device", "Humidity Sensor");
     if (!node) {
         ESP_LOGE(TAG, "Could not initialise node. Aborting!!!");
         vTaskDelay(5000/portTICK_PERIOD_MS);
@@ -59,8 +67,11 @@ void app_main()
     }
 
     /* Create a device and add the relevant parameters to it */
-    temp_sensor_device = esp_rmaker_temp_sensor_device_create("Temperature Sensor", NULL, app_get_current_temperature());
-    esp_rmaker_node_add_device(node, temp_sensor_device);
+    // temp_sensor_device = esp_rmaker_temp_sensor_device_create("Temperature Sensor", NULL, app_get_current_temperature());
+    // esp_rmaker_node_add_device(node, temp_sensor_device);
+
+    humidity_sensor_device = esp_rmaker_temp_sensor_device_create("Humidity Sensor", NULL, app_get_current_humidity());
+    esp_rmaker_node_add_device(node, humidity_sensor_device);
 
     /* Enable OTA */
     esp_rmaker_ota_enable_default();

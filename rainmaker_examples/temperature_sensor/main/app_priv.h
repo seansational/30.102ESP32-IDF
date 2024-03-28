@@ -10,9 +10,11 @@
 #include <stdbool.h>
 
 #define DEFAULT_TEMPERATURE 25.0
-#define REPORTING_PERIOD    60 /* Seconds */
+#define REPORTING_PERIOD    1 /* Seconds */
 
 extern esp_rmaker_device_t *temp_sensor_device;
+extern esp_rmaker_device_t *humidity_sensor_device;
 
 void app_driver_init(void);
 float app_get_current_temperature();
+float app_get_current_humidity();
