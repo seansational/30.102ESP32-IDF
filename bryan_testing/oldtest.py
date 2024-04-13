@@ -49,7 +49,7 @@ def main_loop():
     brightness_amount = st.sidebar.slider("Brightness", min_value=-50, max_value=50, value=0)
     apply_enhancement_filter = st.sidebar.checkbox('Enhance Details')
     print("Hi")
-    image_file = requests.get("http://192.168.189.20/frame")
+    image_file = requests.get("http://192.168.0.20/frame")
     print("got image")
     original_image = Image.open(BytesIO(image_file.content))
 
@@ -68,7 +68,7 @@ def main_loop():
         if not image_file:
             return None
         # print(type(image_file))
-        image_file = requests.get("http://192.168.189.20/frame")
+        image_file = requests.get("http://192.168.0.20/frame")
         original_image = Image.open(BytesIO(image_file.content))
         original_image = np.array(original_image)
 
