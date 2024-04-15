@@ -154,7 +154,7 @@ class Web_App:
 
         while True:
             # try:
-            image_file = requests.get("http://192.168.0.20/frame")
+            image_file = requests.get("http://192.168.189.20/frame")
             original_image = Image.open(BytesIO(image_file.content))
             # original_image = Image.open("img.jpg")
 
