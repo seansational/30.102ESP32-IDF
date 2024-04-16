@@ -1,7 +1,0 @@
-source "C:/Espressif/frameworks/esp-idf-v5.1.2/components/bootloader/Kconfig.projbuild"
-source "C:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_app_format/Kconfig.projbuild"
-source "C:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_rom/Kconfig.projbuild"
-source "C:/Espressif/frameworks/esp-idf-v5.1.2/components/esptool_py/Kconfig.projbuild"
-source "C:/Espressif/frameworks/esp-idf-v5.1.2/components/partition_table/Kconfig.projbuild"
-source "C:/Users/user/Desktop/GIT/30.102ESP32-IDF/aws/esp-aws-iot/examples/mqtt/tls_mutual_auth/main/Kconfig.projbuild"
-source "C:/Espressif/frameworks/esp-idf-v5.1.2/examples/common_components/protocol_examples_common/Kconfig.projbuild"
