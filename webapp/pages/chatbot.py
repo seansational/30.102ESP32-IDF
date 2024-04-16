@@ -5,13 +5,14 @@ import time
 from hugchat import hugchat
 from hugchat.login import Login
 
+#streamlit page config setup
 st.set_page_config(
     page_title="Plant Doctor",
     page_icon="🩺",
 )
-
 st.write("# Ask me anything about your Plants 👋")
 
+#Setup hugging face credentials for hugchat login
 with st.sidebar:
     st.title('🤗💬 HugChat')
     if ('EMAIL' in st.secrets) and ('PASS' in st.secrets):
