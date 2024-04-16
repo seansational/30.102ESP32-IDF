@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/user/Desktop/GIT/30.102ESP32-IDF/sample_project
+# Install script for directory: C:/Users/user/Desktop/GIT/30.102ESP32-IDF/farming
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/user/Desktop/GIT/30.102ESP32-IDF/sample_project/build/esp-idf/cmake_install.cmake")
+  include("C:/Users/user/Desktop/GIT/30.102ESP32-IDF/farming/build/esp-idf/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/user/Desktop/GIT/30.102ESP32-IDF/sample_project/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/user/Desktop/GIT/30.102ESP32-IDF/farming/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
