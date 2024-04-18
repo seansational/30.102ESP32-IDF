@@ -132,7 +132,7 @@ class Web_App:
         self.stat_freq = st.sidebar.slider("Saving Statistics Frequency/hours", min_value=0.1, max_value=10.0,step=0.1,value=1.0)
         self.cv_rate = st.sidebar.slider("Plant Health CV/hours", min_value=-0.1, max_value=5.0, value=1.0,step=0.1)
         self.water_thresh = st.sidebar.slider("Watering Threshold (Humidity)", min_value=1, max_value=100,step=1,value=1)
-
+        
         self.stream_freq = st.sidebar.slider("Image Streaming Frequency/img per seconds", min_value=-0.1, max_value=5.0, value=1.0,step=0.1)
         self.run_cv = st.sidebar.checkbox('Run CV for Plant Health')
         
